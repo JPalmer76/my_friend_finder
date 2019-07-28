@@ -189,10 +189,10 @@
             function validateForm() {
                 var isValid = true;
                 $(".form-control").each(function () {
-                    if ($(this).val() === "") isValid = false;
+                    if ($(this).val() === " ") isValid = false;
                 });
                 $(".selected").each(function () {
-                    if ($(this).val() === "") isValid = false;
+                    if ($(this).val() === " ") isValid = false;
                 });
                 return isValid;
             }
