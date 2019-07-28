@@ -182,6 +182,7 @@
             </div>
         </div>
     </div>
+   
 
     <script type="text/javascript">
         $("#submit").on("click", function () {
@@ -213,7 +214,7 @@
                     ]
                 };
                 var currentURL = window.location.origin;
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                $.post(currentURL + "app/public/survey.html", userData, function (data) {
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
                     $("#resultsModal").modal("toggle");
@@ -228,5 +229,5 @@
     </script>
 
 </body>
-
 </html>
+
