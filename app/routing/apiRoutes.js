@@ -30,7 +30,9 @@ module.exports = function(app) {
     console.log("Name: " + userName);
     console.log("User Score " + userScores);
 
-    var sum = b.reduce(a, b, 0);
+    var sum = b.reduce(function (a, b) {
+      return a + b;
+    }, 0);
 
     console.log("Sum of users score " + sum);
     console.log("Best match friend diff " + bestMatch.friendDifference);
@@ -42,7 +44,9 @@ module.exports = function(app) {
       console.log("Total Diff " + totalDifference);
       console.log("Best match friend diff " + bestMatch.friendDifference);
 
-      var bfriendScore = friends[i].scores.reduce(a, b, 0);
+      var bfriendScore = friends[i].scores.reduce(function (a, b) {
+        return a + b;
+      }, 0);
       console.log("Total friend score " + bfriendScore);
       totalDifference += Math.abs(sum - bfriendScore);
       console.log("-------------------------> " + totalDifference);
